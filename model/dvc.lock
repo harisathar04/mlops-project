@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python3 preprocess.py
+    deps:
+    - path: preprocess.py
+      hash: md5
+      md5: 0b2e2c675b1f81aa7f70827b514e56b7
+      size: 1842
+    - path: raw_data.csv
+      hash: md5
+      md5: 2881fc20e8b5725d7c286975e66f7f2b
+      size: 288
+    outs:
+    - path: processed_data.pkl
+      hash: md5
+      md5: fadffe72e7de33de7415552605471b1f
+      size: 16939
+  train_model:
+    cmd: python3 model_training.py
+    deps:
+    - path: model_training.py
+      hash: md5
+      md5: a941742230453dd0aa86a8f40659439f
+      size: 625
+    - path: processed_data.pkl
+      hash: md5
+      md5: fadffe72e7de33de7415552605471b1f
+      size: 16939
+    outs:
+    - path: temperature_prediction_model.pkl
+      hash: md5
+      md5: b4c75838a4350eeb1490b0ff56fe3962
+      size: 913

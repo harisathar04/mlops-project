@@ -1,0 +1,15 @@
+stages:
+  preprocess:
+    cmd: python3 preprocess.py
+    deps:
+    - preprocess.py
+    - raw_data.csv
+    outs:
+    - processed_data.pkl
+  train_model:
+    cmd: python3 model_training.py
+    deps:
+    - model_training.py
+    - processed_data.pkl
+    outs:
+    - temperature_prediction_model.pkl
