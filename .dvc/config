@@ -1,0 +1,4 @@
+[core]
+    remote = newremote
+['remote "newremote"']
+    url = /Users/riyaantariq/Desktop/dvc_remote
