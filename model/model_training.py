@@ -11,7 +11,7 @@ parser.add_argument('--dev', action='store_true', help='Run in development mode 
 args = parser.parse_args()
 
 # Load the processed data
-X_train, X_test, y_train, y_test = joblib.load("processed_data.pkl")
+X_train, X_test, y_train, y_test = joblib.load("model/processed_data.pkl")
 
 # If dev mode is enabled, reduce dataset size
 if args.dev:
