@@ -21,8 +21,8 @@ stages:
     deps:
     - path: model_training.py
       hash: md5
-      md5: a941742230453dd0aa86a8f40659439f
-      size: 625
+      md5: de4c63db038a6817f862c36f84d5472b
+      size: 983
     - path: processed_data.pkl
       hash: md5
       md5: fadffe72e7de33de7415552605471b1f

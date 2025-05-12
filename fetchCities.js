@@ -16,7 +16,7 @@ const fetchWeatherData = async () => {
 };
 
 // Schedule the task to run every 12 hours
-schedule.scheduleJob("0 */12 * * *", fetchWeatherData);
-//schedule.scheduleJob("*/30 * * * * *", fetchWeatherData);
+//schedule.scheduleJob("0 */12 * * *", fetchWeatherData);
+schedule.scheduleJob("*/30 * * * * *", fetchWeatherData);
 
 console.log("Weather data collection scheduled.");
