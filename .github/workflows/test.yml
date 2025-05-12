@@ -24,9 +24,16 @@ jobs:
         pip install mlflow scikit-learn pandas flask pytest joblib
         npm install
 
-    - name: Start Node.js server
+    - name: Start server in background
       run: |
-        nohup node server.js &  # Start the Node.js server in the background
+        node server.js &
+        echo "Waiting for server to start..."
+        for i in {1..10}; do
+        nc -z localhost 5001 && echo "Server is up!" && break
+        echo "Waiting for port 5001... ($i/10)"
+        sleep 2
+        done
+
 
     - name: Run the model via cURL
       run: |
