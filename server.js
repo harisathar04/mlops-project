@@ -6,7 +6,7 @@ const path = require("path");
 const { spawn } = require("child_process");
 
 // Absolute path to the Python executable
-const pythonPath = path.resolve(__dirname, "venv", "bin", "python");
+const pythonPath = "python3";
 
 // Spawn Flask process
 const flaskProcess = spawn(pythonPath, ["app.py"], {
