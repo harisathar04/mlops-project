@@ -3,7 +3,7 @@ name: Test - Run Tests on Test Branch
 on:
   pull_request:
     branches:
-      - test 
+      - prod 
 
 jobs:
   lint-and-test:
@@ -27,6 +27,11 @@ jobs:
     - name: Start Node.js server
       run: |
         nohup node server.js &  # Start the Node.js server in the background
+
+    - name: Wait for server to start
+      run: |
+        echo "Waiting for server to start..."
+        sleep 10
 
     - name: Run the model via cURL
       run: |
