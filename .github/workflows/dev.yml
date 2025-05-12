@@ -29,4 +29,4 @@ jobs:
 
     - name: Run training script (sanity)
       run: |
-        python train_model.py --dev
+        python model/model_training.py --dev
