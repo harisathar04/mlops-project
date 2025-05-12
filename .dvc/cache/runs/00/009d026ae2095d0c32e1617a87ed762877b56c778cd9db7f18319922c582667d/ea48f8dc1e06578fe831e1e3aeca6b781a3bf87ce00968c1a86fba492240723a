@@ -1,0 +1,15 @@
+cmd: python3 preprocess.py
+deps:
+- path: preprocess.py
+  hash: md5
+  md5: 0b2e2c675b1f81aa7f70827b514e56b7
+  size: 1842
+- path: raw_data.csv
+  hash: md5
+  md5: 2881fc20e8b5725d7c286975e66f7f2b
+  size: 288
+outs:
+- path: processed_data.pkl
+  hash: md5
+  md5: fadffe72e7de33de7415552605471b1f
+  size: 16939

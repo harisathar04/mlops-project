@@ -1,0 +1,6 @@
+date_time,temperature,humidity,wind_speed,weather_condition
+2025-05-03 18:00:00,25.88,46,1.65,light rain
+2025-05-03 21:00:00,24.07,54,3.56,light rain
+2025-05-04 00:00:00,22.51,58,1.3,light rain
+2025-05-04 03:00:00,26.52,43,2.0,light rain
+2025-05-04 06:00:00,30.75,34,2.97,overcast clouds
