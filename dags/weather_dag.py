@@ -8,6 +8,7 @@ import pandas as pd
 model = joblib.load('/opt/airflow/model/weather_condition_model.pkl')
 label_encoder_city = joblib.load('/opt/airflow/model/label_encoder_city.pkl')
 
+
 def predict_weather(**kwargs):
     # Get input features from the arguments passed by Node.js
     features = kwargs['dag_run'].conf['features']  # Assuming features are passed as DAG run configuration
@@ -32,12 +33,14 @@ def predict_weather(**kwargs):
     # Output the prediction
     print(f"Predicted weather condition: {prediction[0]}")
 
+
 # Define default arguments
 default_args = {
     'owner': 'airflow',
     'start_date': datetime(2023, 1, 1),
     'retries': 1,
 }
+
 
 # Define the DAG
 dag = DAG(

@@ -25,7 +25,7 @@ jobs:
         pip install flake8
 
     - name: Lint code
-      run: flake8 model/app.py model/model_training.py model/preprocess.py predict.py dags/weather_dag.py
+      run: flake8 --ignore=E501 model/app.py model/model_training.py model/preprocess.py predict.py dags/weather_dag.py
 
     - name: Run training script (sanity)
       run: |

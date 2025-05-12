@@ -47,3 +47,4 @@ if not args.dev:
     mlflow.log_metric("r_squared", r2)
     mlflow.sklearn.log_model(model, "linear_regression_model")
     mlflow.end_run()
+    

@@ -12,6 +12,7 @@ label_encoder_city = joblib.load(os.path.join(model_dir, "label_encoder_city.pkl
 
 app = Flask(__name__)
 
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
@@ -46,6 +47,7 @@ def predict():
     #     return jsonify({'error': f'Value error: {str(e)}'}), 400
     # except Exception as e:
     #     return jsonify({'error': f'Unexpected error: {str(e)}'}), 500
+
 
 @app.route('/')
 def home():

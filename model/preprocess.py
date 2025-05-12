@@ -38,7 +38,7 @@ df_combined["city"] = label_encoder_city.fit_transform(df_combined["city"])
 joblib.dump(label_encoder_city, 'label_encoder_city.pkl')
 
 # Define features (X) and target (y)
-X = df_combined[["datetime", "humidity", "windSpeed", "city"]] # Exclude 'temperature'
+X = df_combined[["datetime", "humidity", "windSpeed", "city"]]  # Exclude 'temperature'
 y = df_combined["temperature"]  # Target variable
 
 # Convert datetime into numerical features (day, hour, etc.)
