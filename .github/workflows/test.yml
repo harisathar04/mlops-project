@@ -24,14 +24,15 @@ jobs:
         pip install mlflow scikit-learn pandas flask pytest joblib
         npm install
 
-    - name: Start Node.js server
-      run: |
-        nohup node server.js &  # Start the Node.js server in the background
-
     - name: Start Node server
       run: |
-        nohup node server.js &
-        sleep 10  # Give the server time to start
+        nohup node server.js > server.log 2>&1 &
+        for i in {1..15}; do
+          nc -z localhost 5001 && echo "Server is up!" && break
+          echo "Waiting for server..."
+          sleep 2
+        done
+        cat server.log  # Optional: View server logs for debugging
         
     - name: Run the model via cURL
       run: |
