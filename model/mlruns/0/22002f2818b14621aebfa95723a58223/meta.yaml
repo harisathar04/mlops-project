@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/riyaantariq/Desktop/mlops-project/model/mlruns/0/22002f2818b14621aebfa95723a58223/artifacts
+end_time: 1747045920362
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 22002f2818b14621aebfa95723a58223
+run_name: luminous-jay-361
+run_uuid: 22002f2818b14621aebfa95723a58223
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747045918975
+status: 3
+tags: []
+user_id: riyaantariq
