@@ -3,8 +3,8 @@ pipeline {
 
   environment {
     DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials') // Add this in Jenkins
-    FRONTEND_IMAGE = "yourdockerhub/flask_frontend"
-    BACKEND_IMAGE = "yourdockerhub/node_backend"
+    FRONTEND_IMAGE = "harisathar04/flask_frontend"
+    BACKEND_IMAGE = "harisathar04/node_backend"
   }
 
   stages {
