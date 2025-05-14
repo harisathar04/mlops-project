@@ -1,10 +1,12 @@
 node_modules/
 .env
 /data
-/venv
-/frontend/venv
+venv
+frontend/venv
 requirements.txt
 /dags/__pycache__
 /logs
 /processed_data.pkl
 /model.pkl
+/mlruns/0
+/model/mlruns/0
