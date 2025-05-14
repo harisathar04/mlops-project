@@ -25,8 +25,8 @@ pipeline {
     stage('Push Images to Docker Hub') {
       steps {
         sh """
-          docker tag flask_frontend $FRONTEND_IMAGE
-          docker tag node_backend $BACKEND_IMAGE
+          docker tag mlops-project-frontend $FRONTEND_IMAGE
+          docker tag mlops-project-backend $BACKEND_IMAGE
           docker push $FRONTEND_IMAGE
           docker push $BACKEND_IMAGE
         """
